@@ -9,24 +9,23 @@ through Rust services.
 edition = "2021"
 homepage = "https://github.com/flemosr/envoy-types"
 keywords = ["rpc", "grpc", "async", "envoy", "extauthz"]
-license = "Apache-2.0"
 readme = "../README.md"
 repository = "https://github.com/flemosr/envoy-types"
 version = "0.2.0"
 
 [dependencies]
-prost = { version = "0.11.9", default-features = false, features = [
+prost = { version = "0.12.3", default-features = false, features = [
     "prost-derive",
 ] }
-tonic = { version = "0.9.2", default-features = false, features = [
+tonic = { version = "0.10.2", default-features = false, features = [
     "codegen",
     "transport",
     "prost",
 ] }
-
+futures-core = "0.3"
 [dev-dependencies]
 glob = "0.3.1"
-tonic-build = { version = "0.9.2", default-features = false, features = [
+tonic-build = { version = "0.10.2", default-features = false, features = [
     "prost",
     "cleanup-markdown",
 ] }
